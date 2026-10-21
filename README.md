@@ -31,11 +31,11 @@ flowchart TD
         N[User Query] --> O[Hybrid Retriever]
         O -->|Dense: HNSW Cosine| J
         O -->|Sparse: GIN ts_rank_cd| J
-        J --> P[Reciprocal Rank Fusion - RRF<br/>Score = dw/(k + r_dense) + sw/(k + r_sparse)]
-        P --> Q[Candidate Pool: Top-30]
-        Q --> R[Stage 2: Cross-Encoder Reranker<br/>ms-marco-MiniLM-L-6-v2]
-        R --> S[Post-Rerank Window Expansion & Pruning]
-        S --> T[Lost-in-the-Middle Attention Reordering<br/>U-Shaped Context Optimization]
+        J --> P["Reciprocal Rank Fusion - RRF<br/>Score = dw/(k + r_dense) + sw/(k + r_sparse)"]
+        P --> Q["Candidate Pool: Top-30"]
+        Q --> R["Stage 2: Cross-Encoder Reranker<br/>ms-marco-MiniLM-L-6-v2"]
+        R --> S["Post-Rerank Window Expansion & Pruning"]
+        S --> T["Lost-in-the-Middle Attention Reordering<br/>U-Shaped Context Optimization"]
     end
 
     subgraph Generation ["4. Grounded Synthesis & Anti-Biased Evaluation"]
