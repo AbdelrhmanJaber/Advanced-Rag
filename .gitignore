@@ -1,0 +1,78 @@
+# ==============================================================================
+# Git Ignore - Advanced-RAG Project
+# Keeps only source code, tests, documentation, and configuration files.
+# ==============================================================================
+
+# --- Python Virtual Environments ---
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# --- Bytecode & Python Caches ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# --- Project Data & Processed Outputs ---
+data/
+output/
+*.pdf
+
+# --- Local Databases & Vector Dumps ---
+*.db
+*.sqlite
+*.sqlite3
+src/database/database.db
+
+# --- Logs & Run Artifacts ---
+*.log
+validator_issues.log
+logs/
+
+# --- Environment Variables & Secrets ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# --- Build, Packaging & Distribution ---
+build/
+dist/
+*.egg-info/
+*.egg
+eggs/
+.eggs/
+wheels/
+*.whl
+
+# --- Testing & Code Coverage ---
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# --- Linters & Type Checkers ---
+.mypy_cache/
+.ruff_cache/
+.pyright/
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints/
+
+# --- IDEs & Editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- OS Metadata ---
+.DS_Store
+Thumbs.db
